@@ -1,1 +1,23 @@
-/*# sourceMappingURL=main.css.map */
+.alert-box {
+  background-color: skyblue;
+  padding: 20px;
+  color: white;
+  border-radius: 5px;
+  display: none;
+}
+
+.alert-box2 {
+  background-color: skyblue;
+  padding: 20px;
+  color: white;
+  border-radius: 5px;
+  display: none;
+}
+
+.alert-box3 {
+  background-color: skyblue;
+  padding: 20px;
+  color: white;
+  border-radius: 5px;
+  display: none;
+}/*# sourceMappingURL=main.css.map */
