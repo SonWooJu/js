@@ -9,7 +9,7 @@
 <body>
     <div class="alert-box" id="btn-alert">
         dddd
-        <button onclick="document.getElementById('btn-alert').style.display='none'">닫기</button>
+        <button onclick="closebtn()">닫기</button>
     </div>
     <div class="alert-box2" id="btn-alert">
         dddd
@@ -17,9 +17,15 @@
     <div class="alert-box3" id="btn-alert">
         dddd
     </div>
-    <button onclick="document.getElementById('btn-alert').style.display= 'block'";>버튼</button>
+    <button onclick="alert()">버튼</button>
 <script>
+    function alert(){
+        document.getElementById('btn-alert').style.display= 'block';
+    }
+    function closebtn(){
+        document.getElementById('btn-alert').style.display='none';
 
+    }
 </script>
 </body>
 </html>
