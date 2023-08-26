@@ -22,9 +22,17 @@
         <li class="list-group-item">A third item</li>
         <li class="list-group-item">A fourth item</li>
         <li class="list-group-item">And a fifth one</li>
-      </ul>  
-
+      </ul>
+      <p class="hello">안녕</p>
+      <button id="test-btn"></button>  
+      <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 <script>
+
+    $('.hello').css('color','red');
+    $('#test-btn').on('click',function(){
+     $('.hello').hide(); 
+    
+    })
     document.querySelector('.list-group').
 
     document.getElementsByClassName('navbar-toggler')[0].addEventListener('click', function(){
