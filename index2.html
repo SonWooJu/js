@@ -16,6 +16,13 @@
           </button>
         </div>
       </nav>
+      <div class="black-bg">
+        <div class="white-bg">
+          <h4>로그인하세요</h4>
+          <button class="btn btn-danger" id="close">닫기</button>
+        </div>
+      </div>
+      <button id="modal-btn">모달</button>   
       <ul class="list-group">
         <li class="list-group-item">An item</li>
         <li class="list-group-item">A second item</li>
@@ -24,7 +31,8 @@
         <li class="list-group-item">And a fifth one</li>
       </ul>
       <p class="hello">안녕</p>
-      <button id="test-btn"></button>  
+      <button id="test-btn"></button>
+    
       <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 <script>
 
@@ -32,6 +40,12 @@
     $('#test-btn').on('click',function(){
      $('.hello').hide(); 
     
+    })
+    $('#modal-btn').on('click',function(){
+      $('.black-bg').css('display','block');
+    })
+    $('#close').on('click',function(){
+      $('.black-bg').hide();
     })
     document.querySelector('.list-group').
 
