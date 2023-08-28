@@ -30,8 +30,7 @@
         <li class="list-group-item">A fourth item</li>
         <li class="list-group-item">And a fifth one</li>
       </ul>
-      <p class="hello">안녕</p>
-      <button id="test-btn"></button>
+  
     
       <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 <script>
@@ -42,10 +41,11 @@
     
     })
     $('#modal-btn').on('click',function(){
-      $('.black-bg').css('display','block');
+      $('.black-bg').addClass('show-modal');
     })
     $('#close').on('click',function(){
       $('.black-bg').hide();
+      $('.black-bg').removeClass('show-modal');
     })
     document.querySelector('.list-group').
 
