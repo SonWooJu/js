@@ -48,9 +48,11 @@
     
       <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 <script>
- $('form').on('submit',function(){
+ $('form').on('submit',function(e){
+      
       if(document.getElementById('email').value == ''){
         alert('아이디를 입력해주세요');
+        e.preventDefault();
       } 
     })
     $('.hello').css('color','red');
