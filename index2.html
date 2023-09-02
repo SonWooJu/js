@@ -24,7 +24,7 @@
               <input type="text" class="form-control" id="email">
              </div>
              <div class="my-3">
-               <input type="password" class="form-control" id ="log-pw">
+               <input type="password" class="form-control" id ="pw">
              </div>
              <button id = "mes" type="submit" class="btn btn-primary">전송</button>
              <button type="button" class="btn btn-danger" id="close">닫기</button>
@@ -48,18 +48,36 @@
     
       <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 <script>
-   if(1==3){
-    console.log('맞워요');
-   } else if(3==3){
-    console.log('이게맞워요');
-   }
- $('form').on('submit',function(e){
-      
-      if(document.getElementById('email').value == ''){
+   
+   
+    $('form').on('submit',function(e){
+  
+    var email = document.getElementById('email').value.length;
+    var psw =  document.getElementById('pw').value.length; 
+    console.log(email);
+    console.log(psw);
+    if(email==0 && psw ==0){
+      alert('아이디와 비밀번호를 입력해 주세요')
+      e.preventDefault();
+    } 
+    else if(email === 0){
         alert('아이디를 입력해주세요');
         e.preventDefault();
-      } 
+      }
+      else if(psw === 0){
+        alert('비밀번호를 입력해주세요');
+        e.preventDefault();
+    
+      }
+      else if(psw < 6){
+        alert('비밀번호를 6자리 이상으로 만들어주세요');
+        e.preventDefault();
+    
+      }
+      
+      
     })
+ 
     $('.hello').css('color','red');
     $('#test-btn').on('click',function(){
      $('.hello').hide(); 
