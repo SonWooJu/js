@@ -44,11 +44,18 @@
         <h4>Shirts on Sale</h4>
         <button id="login" class="btn btn-danger">로그인</button>
     </div>
+    <input type="text" id="num"> <span id="replace"></span>
   
     
       <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 <script>
-   document.getElementById('email').addEventListener('input',function(){
+   document.getElementById('num').addEventListener('change',function(){
+    var num = document.getElementById('num').value;
+    if(num % 3 ==0){
+      console.log('짝');
+    }else{
+      console.log('통과');
+    }
     
 
    })
