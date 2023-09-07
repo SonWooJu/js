@@ -56,4 +56,9 @@
 .main-bg {
   padding: 100px 20px;
   background: lightgray;
+}
+
+.black-background {
+  background-color: black;
+  color: white;
 }/*# sourceMappingURL=main.css.map */

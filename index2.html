@@ -11,6 +11,7 @@
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
           <span class="navbar-brand">Navbar</span>
+          <span class="badge bg-dark">Dark 🔄</span>
           <button class="navbar-toggler" type="button">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -45,13 +46,42 @@
         <button id="login" class="btn btn-danger">로그인</button>
     </div>
     <input type="text" id="num"> <span id="replace"></span>
-  
+    <br>
+    1차 시험<input type="text" id="num1">
+    <br>
+    2차 시험 <input type="text" id="num2">
     
       <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 <script>
+  var count = 0;
+  $('.badge').on('click', function(){
+    count += 1;
+    console.log(count);
+    if(count %2 ==0){
+        $('body').addClass('black-background')
+    } else{
+      $('body').removeClass('black-background')
+    }
+  })
+  document.getElementById('num2').addEventListener('change',function(){
+    var num1 = document.getElementById('num1').value;
+    var num2 = document.getElementById('num2').value;
+    snum1 = parseInt(num1);
+    snum2 = parseInt(num2);
+    
+    if(num1<=39 || num2 <=39){
+      console.log('불합격');
+    } else if(snum1 + snum2 >= 120){
+      console.log('합격');
+    } else{
+      console.log('불합격');
+
+    }
+    console.log(sum);
+  })
    document.getElementById('num').addEventListener('change',function(){
     var num = document.getElementById('num').value;
-    if(num % 3 ==0){
+    if(num % 10 ==9 || num % 10 == 6 || num % 10 == 3){
       console.log('짝');
     }else{
       console.log('통과');
