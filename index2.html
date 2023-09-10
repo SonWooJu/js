@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <span class="navbar-brand">Navbar</span>
           <span class="badge bg-dark">Dark 🔄</span>
@@ -54,6 +54,16 @@
       <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 <script>
 
+  var money = 60000;
+  var future = 0;
+  if(money==60000){
+    future += money *1.2 *1.2;
+  } else{
+    future = money *1.15 *1.15;
+  }
+
+  console.log(future);
+  
   var count = 0;
   $('.badge').on('click', function(){
     count += 1;
@@ -95,6 +105,7 @@
    })
    
     $('form').on('submit',function(e){
+
   
     var email = document.getElementById('email').value.length;
     var psw =  document.getElementById('pw').value.length; 
