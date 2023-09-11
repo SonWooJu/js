@@ -50,16 +50,30 @@
     1차 시험<input type="text" id="num1">
     <br>
     2차 시험 <input type="text" id="num2">
+
+    <p>태조 이성계가 태어난 년도는?</p>
+    <input type="text" id="answer">
+    <button id="send-answer">제출</button>
     
       <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 <script>
-
+ var count = 0;
+  $('#send-answer').on('click',function(){
+    var year = document.getElementById('answer').value;
+    console.log(count);
+    count+=1;
+    if(year == 1335){
+      alert('성공');
+    }else if(count >=3){
+      alert('멍청이');
+    }
+  })
   var money = 60000;
   var future = 0;
   if(money==60000){
-    future += money *1.2 *1.2;
+    future += money * 1.2 ** 2;
   } else{
-    future = money *1.15 *1.15;
+    future = money *1.15 **2;
   }
 
   console.log(future);
@@ -74,6 +88,10 @@
       $('body').removeClass('black-background')
     }
   })
+
+  var first = 360;
+  first = first + first * 2/3 + first * 2/3 * 2/3;
+  console.log(first);
 
 
 
