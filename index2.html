@@ -46,7 +46,7 @@
         <button id="login" class="btn btn-danger">로그인</button>
     </div>
     <div class="alert alert-danger">
-      5초이내 구매시 사은품 증정
+      5초 이내 구매시 사은품 증정
     </div>
     <input type="text" id="num"> <span id="replace"></span>
     <br>
@@ -60,9 +60,25 @@
     
       <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 <script>
+  var time = 5;
+  function timeout(){
+    setInterval(function(){
+      time --;
+      $('.alert').html("");
+      $('.alert').prepend(time + '초 이내 구매시 사은품 증정');
+      if(time ==0){
+        $('.alert').hide();
+      }
+  },1000)
+  }
   setInterval(function(){
-    $('.alert').hide();
-  },3000)
+      time --;
+      $('.alert').html("");
+      $('.alert').prepend(time + '초 이내 구매시 사은품 증정');
+      if(time ==0){
+        $('.alert').hide();
+      }
+  },1000)
  var count = 0;
   $('#send-answer').on('click',function(){
     var year = document.getElementById('answer').value;
