@@ -45,6 +45,9 @@
         <h4>Shirts on Sale</h4>
         <button id="login" class="btn btn-danger">로그인</button>
     </div>
+    <div class="alert alert-danger">
+      5초이내 구매시 사은품 증정
+    </div>
     <input type="text" id="num"> <span id="replace"></span>
     <br>
     1차 시험<input type="text" id="num1">
@@ -57,6 +60,9 @@
     
       <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 <script>
+  setInterval(function(){
+    $('.alert').hide();
+  },3000)
  var count = 0;
   $('#send-answer').on('click',function(){
     var year = document.getElementById('answer').value;
