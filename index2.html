@@ -146,7 +146,7 @@
    
     $('form').on('submit',function(e){
 
-  
+    var email2= document.getElementById('email').value;
     var email = document.getElementById('email').value.length;
     var psw =  document.getElementById('pw').value.length; 
     console.log(email);
@@ -169,7 +169,9 @@
         e.preventDefault();
     
       }
-      
+    if(/\S+@\S+\.\S+/.test(email2)){
+      alert('이메일의 형식으로 입력해주세요')
+    }
       
     })
     
