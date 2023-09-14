@@ -61,4 +61,18 @@
 .black-background {
   background-color: black;
   color: white;
+}
+
+.slide-container {
+  width: 300vw;
+  transition: all 1s;
+}
+
+.slide-box {
+  width: 100vw;
+  float: left;
+}
+
+.slide-box img {
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */

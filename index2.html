@@ -57,9 +57,44 @@
     <p>태조 이성계가 태어난 년도는?</p>
     <input type="text" id="answer">
     <button id="send-answer">제출</button>
-    
+    <div style="overflow: hidden;">
+    <div class="slide-container">
+      <div class="slide-box">
+        <img src="/img/car1.png">
+      </div>
+      <div class="slide-box">
+        <img src="/img/car2.png">
+      </div>
+      <div class="slide-box">
+        <img src="/img/car3.png">
+      </div>
+    </div>
+    </div>
+    <button class="slide-1">1</button>
+    <button class="slide-2">2</button>
+    <button class="slide-3">3</button>
+    <button class="slide-4">다음</button>
       <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 <script>
+    var slide= 0;
+
+    $('.slide-1').on('click',function(){
+    $('.slide-container').css('transform','translateX(0vw)')
+  })
+  $('.slide-2').on('click',function(){
+    $('.slide-container').css('transform','translateX(-100vw)')
+  })
+  $('.slide-3').on('click',function(){
+    $('.slide-container').css('transform','translateX(-200vw)')
+  })
+  $('.slide-4').on('click',function(){
+    slide = slide +100;
+    if(slide >200){
+    slide = 0;  
+
+    }
+    $('.slide-container').css('transform','translateX("+(-slide)+"vw)')
+  })
   var time = 5;
   function timeout(){
     setInterval(function(){
@@ -147,10 +182,19 @@
     $('form').on('submit',function(e){
 
     var email2= document.getElementById('email').value;
+    var psw2 =  document.getElementById('pw').value;
     var email = document.getElementById('email').value.length;
     var psw =  document.getElementById('pw').value.length; 
     console.log(email);
     console.log(psw);
+    if ( /\S+@\S+.\S+/.test(email2) ==false ){
+    alert('이메일형식아님')
+    e.preventDefault();
+  }
+    if(/[A-Z]/.test(psw2) == false){
+      alert('비밀번호에 대문자를 포함하여 주세요')
+      e.preventDefault();
+    }
     if(email==0 && psw ==0){
       alert('아이디와 비밀번호를 입력해 주세요')
       e.preventDefault();
@@ -169,9 +213,7 @@
         e.preventDefault();
     
       }
-    if(/\S+@\S+\.\S+/.test(email2)){
-      alert('이메일의 형식으로 입력해주세요')
-    }
+    
       
     })
     
