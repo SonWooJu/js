@@ -74,12 +74,24 @@
     <button class="slide-2">2</button>
     <button class="slide-3">3</button>
     <button class="slide-4">다음</button>
-      <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <div style="height: 1000px;"></div>  
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 <script>
-  
-  function vat(a){
-    return a *0.1;
+  function sale(a,b){
+    if(b == true){
+      var num = a-(a/10) -1.5; 
+    } else {
+      var num = a-(a/10);
+    }
+    return num;
   }
+  console.log(sale(70,false));
+  function time(a,b){
+    var num1 = a * 60;
+    var num2 = (num1 + b) *1000;
+    return num2;
+  }
+  console.log(time(1,30));
     var slide= 1;
 
     $('.slide-1').on('click',function(){
