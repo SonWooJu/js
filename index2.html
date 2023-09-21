@@ -74,12 +74,20 @@
     <button class="slide-2">2</button>
     <button class="slide-3">3</button>
     <button class="slide-4">다음</button>
+    <div class="lorem" style="width: 200px; height: 100px; overflow-y: scroll">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae voluptas voluptatum minus praesentium fugit debitis at, laborum ipsa itaque placeat sit, excepturi eius. Nostrum perspiciatis, eligendi quae consectetur praesentium exercitationem.
+    </div> 
     <div style="height: 1000px;"></div>  
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 <script>
-  window.addEventListener('scroll',function(){
-    
-  })
+$('.lorem').on('scroll',function(){
+  var ing = document.querySelector('.lorem').scrollTop;
+  var max = document.querySelector('.lorem').scrollHeight;
+  var see = document.querySelector('.lorem').clientHeight;
+  if(ing + see >= max){
+    alert('완료');
+  }
+})
   function sale(a,b){
     if(b == true){
       var num = a-(a/10) -1.5; 
