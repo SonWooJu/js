@@ -80,6 +80,11 @@
     <div style="height: 1000px;"></div>  
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 <script>
+   $(window).on('scroll', function(){
+    if (window.scrollY > 100) {
+      $('.navbar-brand').css('font-size', '20px');
+    }
+  });
 $('.lorem').on('scroll',function(){
   var ing = document.querySelector('.lorem').scrollTop;
   var max = document.querySelector('.lorem').scrollHeight;
