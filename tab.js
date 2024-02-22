@@ -3,11 +3,14 @@ var content = $('.tab-content');
 
 for(let i = 0; i<3; i++){
     $('.tab-button').eq(i).on('click',function(){
-        $('.tab-button').removeClass('orange');
-        $('.tab-button').eq(i).addClass('orange');
-        $('.tab-content').removeClass('show');
-        $('.tab-content').eq(i).addClass('show');
+        topen(i)
         })
+}
+function topen(num){
+    $('.tab-button').removeClass('orange');
+    $('.tab-button').eq(num).addClass('orange');
+    $('.tab-content').removeClass('show');
+    $('.tab-content').eq(num).addClass('show');
 }
 
 // $('.tab-button').eq(0).on('click',function(){
