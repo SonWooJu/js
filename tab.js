@@ -2,18 +2,9 @@ var button = $('.tab-button');
 var content = $('.tab-content');
 
 $('.list').click(function(e){
-    if(e.target == document.querySelectorAll('.tab-button')[0]) {
-        topen(0)
+   
 
-    }
-    else if(e.target == document.querySelectorAll('.tab-button')[1]) {
-        topen(1)
-
-    }
-    else if(e.target == document.querySelectorAll('.tab-button')[2]) {
-        topen(2)
-
-    }
+    topen(e.target.dataset.id);
 
 })
 
