@@ -89,7 +89,8 @@
       <script src="tab.js"></script>
 <script>
 var text = '<p>안녕</p>';
-document.querySelector('#test').insertAdjacentHTML;
+// document.querySelector('#test').insertAdjacentHTML('beforeend',text); - js
+$('#test').append(text);
 
 // var a = document.createElement('p');
 // a.innerHTML='안녕';
