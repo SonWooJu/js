@@ -77,6 +77,8 @@
         <select class="form-select mt-2">
           <option>모자</option>
           <option>셔츠</option>
+          <option>바지</option>
+
         </select>
         <select class="form-select mt-2 form-hide">
           <option>95</option>
@@ -108,10 +110,22 @@ $('.form-select').eq(0).on('input',function(e){
   
 if(value == '셔츠'){
   $('.form-select').eq(1).removeClass('form-hide');
-} else{
-  $('.form-select').eq(1).style.display ='none'
+  var shirts = `<option>95</option>
+          <option>100</option>`;
+  $('.form-select').eq(1).html(shirts);
+} 
+else if(value =='바지'){
+  $('.form-select').eq(1).removeClass('form-hide');
+  var jeans = `<option>28</option>
+          <option>30</option>`;
+  $('.form-select').eq(1).html(jeans);
+}
+else{
+  $('.form-select').eq(1).addClass('form-hide')
 }
 })
+
+
 
 // 
 var carPrice= [50000,100000,1000];
