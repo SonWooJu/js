@@ -97,6 +97,7 @@ $('#test').append(text);
 // var a = document.createElement('p');
 // a.innerHTML='안녕';
 // document.querySelector('#test').appendChild(a);
+var pants = [28,30,32];
 var car = ['소나타','제네시스','라면']; //array
 var car2 = {name :'소나타', price: 50000}; //object
 console.log(car2['name']);
@@ -116,9 +117,8 @@ if(value == '셔츠'){
 } 
 else if(value =='바지'){
   $('.form-select').eq(1).removeClass('form-hide');
-  var jeans = `<option>30</option>
-          <option>31</option>`;
-  $('.form-select').eq(1).html(jeans);
+  $('.form-select').eq(1).html('');
+  
 }
 else{
   $('.form-select').eq(1).addClass('form-hide')
