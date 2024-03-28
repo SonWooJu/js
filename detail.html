@@ -118,7 +118,7 @@ if(value == '셔츠'){
 else if(value =='바지'){
   $('.form-select').eq(1).removeClass('form-hide');
   $('.form-select').eq(1).html('');
-  pants.forEach(function(a){
+  pants.forEach(function(a, i){
     $('.form-select').eq(1).append(`<option> ${a}</option>`);
   })
 }
