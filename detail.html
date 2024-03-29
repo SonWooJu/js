@@ -98,6 +98,11 @@ $('#test').append(text);
 // a.innerHTML='안녕';
 // document.querySelector('#test').appendChild(a);
 var pants = [28,30,32];
+var shirts= [95,100,105];
+for (var key in shirts){
+  console.log(key);
+}
+
 var car = ['소나타','제네시스','라면']; //array
 var car2 = {name :'소나타', price: 50000}; //object
 console.log(car2['name']);
@@ -111,9 +116,16 @@ $('.form-select').eq(0).on('input',function(e){
   
 if(value == '셔츠'){
   $('.form-select').eq(1).removeClass('form-hide');
-  var shirts = `<option>95</option>
-          <option>100</option>`;
-  $('.form-select').eq(1).html(shirts);
+  $('.form-select').eq(1).html('');
+  for (var key in shirts){
+  console.log(key);
+}
+  shirts.forEach(function(a){
+    $('.form-select').eq(1).append(`<option> ${a}</option>`);
+  })
+  // var shirts = `<option>95</option>
+  //         <option>100</option>`;
+  // $('.form-select').eq(1).html(shirts);
 } 
 else if(value =='바지'){
   $('.form-select').eq(1).removeClass('form-hide');
@@ -126,7 +138,7 @@ else{
   $('.form-select').eq(1).addClass('form-hide')
 }
 })
-
+var obj = {name: 'kim', age : 20}
 
 
 // 
