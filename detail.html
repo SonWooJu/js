@@ -100,12 +100,10 @@ $('#test').append(text);
 var pants = [28,30,32];
 var shirts= [95,100,105];
 for (var key in shirts){
-  console.log(key);
 }
 
 var car = ['소나타','제네시스','라면']; //array
 var car2 = {name :'소나타', price: 50000}; //object
-console.log(car2['name']);
 car [0] = '아반떼';
 car.sort(); // 정렬
 /// car.slice(1,3); // 중간값 자르기
@@ -149,9 +147,7 @@ var carPrice= [50000,100000,1000];
         document.getElementById('btn-alert').style.display= open;
         document.getElementsByClassName('title')[0].innerHTML = ht;
     }
-    document.getElementById('close').addEventListener('click', function(){
-        document.getElementById('btn-alert').style.display = 'none';
-    });
+  
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
