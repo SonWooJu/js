@@ -105,9 +105,20 @@ function 이름찾기(name){
 이름찾기('철수');
 
 function 평균(arr,score){
-
+  var result = 0;
+  for(let i=0; i < arr.length; i++){
+    result = result + arr[i];
+  }
+  
+  if(result/arr.length < score){
+    var av = result/arr.length;
+    var scores = score - av;
+    console.log(`평균보다 ${scores}점이 올랐네요`);
+  } else{
+    console.log('평균이거나 낮음');
+  }
 }
-
+평균([10,20,30,40,50],40);
 // 구구단
 // for(var i = 2; i < 10; i++){
 //   for(var j =1; j < 10; j++){
