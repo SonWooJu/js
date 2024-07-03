@@ -8,11 +8,7 @@ $('.list').click(function(e){
 
 })
 
-// for(let i = 0; i<3; i++){
-//     $('.tab-button').eq(i).on('click',function(){
-//         topen(i)
-//         })
-// }
+
 function topen(num){
     $('.tab-button').removeClass('orange');
     $('.tab-button').eq(num).addClass('orange');
