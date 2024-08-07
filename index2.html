@@ -237,24 +237,24 @@ $('.lorem').on('scroll',function(){
     e.preventDefault();
   }
     if(/[A-Z]/.test(psw2) == false){
-      alert('비밀번호에 대문자를 포함하여 주세요')
+      alert('비밀번호에 대문자를 포함하여 주세요.')
       e.preventDefault();
     }
     if(email==0 && psw ==0){
-      alert('아이디와 비밀번호를 입력해 주세요')
+      alert('아이디와 비밀번호를 입력해 주세요.')
       e.preventDefault();
     } 
     else if(email === 0){
-        alert('아이디를 입력해주세요');
+        alert('아이디를 입력해주세요.');
         e.preventDefault();
       }
       else if(psw === 0){
-        alert('비밀번호를 입력해주세요');
+        alert('비밀번호를 입력해주세요.');
         e.preventDefault();
     
       }
       else if(psw < 6){
-        alert('비밀번호를 6자리 이상으로 만들어주세요');
+        alert('비밀번호를 6자리 이상으로 만들어주세요.');
         e.preventDefault();
     
       }
